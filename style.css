@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+}
+.calculator {
+  margin: 20px auto;
+
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 600px;
+  background-color: grey;
+  border: 10px solid rgb(0, 0, 0);
+  border-radius: 20px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.466);
+}
+
+.display {
+  display: flex;
+  height: 20%;
+  background-color: rgb(17, 44, 1);
+  color: white;
+  align-items: center;
+  font-size: 40px;
+  margin: 10px;
+  border-radius: 10px;
+  overflow-x: scroll;
+  white-space: nowrap;
+  padding: 0 15px 0 15px;
+  flex: 0.2 0 auto;
+}
+
+.display > span {
+  margin-right: 0;
+}
+
+.display::-webkit-scrollbar {
+  width: 10px;
+  cursor: pointer;
+}
+
+/* Track */
+.display::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.display::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+.display::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  cursor: pointer;
+}
+
+.buttonsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex: 1 0 auto;
+}
+
+.digit,
+.operator,
+.delete {
+  flex: 1 1 calc(25% - 20px);
+}
+
+.equals {
+  flex: 1 1 calc(25% - 20px);
+}
+
+.button {
+  margin: 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  border: 3px solid rgb(29, 29, 29);
+
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-shadow: 1px 1px 1px black;
+}
+
+.button:active {
+  box-shadow: none;
+}
+
+.button:disabled {
+  box-shadow: none;
+  background-color: #555;
+}
+
+.digit {
+  background: rgb(0, 0, 0);
+  color: white;
+}
+
+.operator {
+  background-color: orange;
+  color: white;
+}
+
+.delete {
+  background-color: red;
+}
